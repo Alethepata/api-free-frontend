@@ -1,19 +1,29 @@
 <script>
+import Header from './components/Header.vue';
 export default {
-  name:"App"
+  name: "App",
+  components: {
+    Header
+  }
 }
 
 </script>
 <template>
+  <Header/>
   <div class="container-custom">
-    <RouterView />
+    <div class="row vh-100 w-100">
+      <div class="col-2">
+        <h3>Persone suggerite</h3>
+      </div>
+      <div class="col w-100 h-100 overflow-auto">
+        <RouterView />
+      </div>
+      <div class="col-2">
+        <h3>Messaggi</h3>
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
-.container-custom{
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid black;
-}
 </style>
