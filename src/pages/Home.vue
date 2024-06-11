@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { store } from '../data/store.js';
 
-import Post from '../components/Post.vue';
+import Post from '../components/partials/Post.vue';
 
 export default {
     name: 'Home',
@@ -32,7 +32,7 @@ export default {
 
 <template>
     <div class="container-posts m-5">
-        <div v-for="post in store.posts" :key="post.id" class="post my-3">
+        <div v-for="post in store.posts" :key="post.id" class="post border rounded-3 px-5 py-4 my-5">
             <Post 
             :title="post.title" 
             :content="post.content"
