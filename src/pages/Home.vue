@@ -32,15 +32,7 @@ export default {
 
 <template>
     <div class="container-posts m-5">
-        <div v-for="post in store.posts" :key="post.id" class="post border rounded-3 px-5 py-4 my-5">
-            <Post 
-            :title="post.title" 
-            :content="post.content"
-            :image="post.image"
-            :tags="post.tags"
-            :category="post.category"
-            />
-        </div>
+        <Post :posts="store.posts"/>
     </div>
 </template>
 
